@@ -5,7 +5,7 @@
 	  <div class="carousel-inner">
 	  	@foreach($banners as $index => $banner)
 	    <div class="carousel-item @if($index==0) active @endif">
-	      <img src="{{asset('storage/app/'.$banner->banner_src)}}" class="d-block w-100" alt="{{$banner->alt_text}}">
+	     	<img src="{{asset('storage/app/'.$banner->banner_src)}}" class="d-block w-100" alt="{{$banner->alt_text}}">
 	    </div>
 	    @endforeach
 	  </div>
@@ -67,7 +67,7 @@
 	<!-- Gallery Section End -->
 
 	<!-- Slider Section Start -->
-	<h1 class="text-center mt-5" id="gallery">Review</h1>
+	<h1 class="text-center mt-5" id="gallery">Reviews From Customers</h1>
 	<div id="testimonials" class="carousel slide p-5 bg-secondary text-white border mb-5" data-bs-ride="carousel">
 	  <div class="carousel-inner">
 	  	@foreach($testimonials as $index => $testi)
@@ -93,6 +93,7 @@
 	  </button>
 	</div>
 	<!-- Slider Section End -->
+	
 
 <!-- LightBox css -->
 <link rel="stylesheet" type="text/css" href="{{asset('public/vendor')}}/lightbox2-2.11.3/dist/css/lightbox.min.css" />

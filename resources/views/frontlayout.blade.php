@@ -10,7 +10,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <div class="container">
-	    <a class="navbar-brand" href="{{url('/')}}">A Hotel</a>
+	    <a class="navbar-brand" href="{{url('/')}}">Siara Hotel</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
@@ -21,7 +21,7 @@
 	        <a class="nav-link" href="{{url('page/about-us')}}">About Us</a>
 	        <a class="nav-link" href="{{url('page/contact-us')}}">Contact Us</a>
 	        @if(Session::has('customerlogin'))
-	        <a class="nav-link" href="{{url('customer/add-testimonial')}}">Add Testimonial</a>
+	        <a class="nav-link" href="{{url('customer/add-testimonial')}}">Add Review</a>
 	        <a class="nav-link" href="{{url('logout')}}">Logout</a>
 	        <a class="nav-link btn btn-sm btn-danger" href="{{url('booking')}}">Booking</a>
 	        @else

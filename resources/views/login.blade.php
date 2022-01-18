@@ -42,6 +42,15 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                     </div>
+                                    @if($errors->any())
+                                    @foreach($errors->all() as $error)
+                                        <p class="text-danger">{{$error}}</p>
+                                    @endforeach
+                                @endif
+
+                                @if(Session::has('msg'))
+                                    <p class="text-danger">{{session('msg')}}</p>
+                                @endif
                                     <form class="user" method="post" action="{{url('admin/login')}}">
                                         @csrf
                                         <div class="form-group">
@@ -64,15 +73,7 @@
                                         
                                     </form>
 
-                                    @if($errors->any())
-                                        @foreach($errors->all() as $error)
-                                            <p class="text-danger">{{$error}}</p>
-                                        @endforeach
-                                    @endif
-
-                                    @if(Session::has('msg'))
-                                        <p class="text-danger">{{session('msg')}}</p>
-                                    @endif
+                                   
 
                                     
                                 </div>
