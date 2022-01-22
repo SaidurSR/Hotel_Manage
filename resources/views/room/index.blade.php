@@ -30,7 +30,7 @@
                                             @foreach($data as $key=> $d)
                                             <tr>
                                                 <td>{{$key+1}}</td>
-                                                <td>{{$d->roomtype->title}}</td>
+                                                <td>{{$d->roomtype->title ?? 'None'}}</td>
                                                 <td>{{$d->title}}</td>
                                                 <td>
                                                     <a href="{{url('admin/rooms/'.$d->id)}}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>

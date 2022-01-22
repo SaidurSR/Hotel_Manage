@@ -33,9 +33,9 @@
                                         @foreach($data as $key=> $booking)
                                         <tr>
                                             <td>{{$key+1}}</td>
-                                            <td>{{$booking->customer->full_name}}</td>
-                                            <td>{{$booking->room->title}}</td>
-                                            <td>{{$booking->room->Roomtype->title}}</td>
+                                            <td>{{$booking->customer->full_name ?? 'None'}}</td>
+                                            <td>{{$booking->room->title ?? 'None'}}</td>
+                                            <td>{{$booking->room->Roomtype->title ?? 'None'}}</td>
                                             <td>{{$booking->checkin_date}}</td>
                                             <td>{{$booking->checkout_date}}</td>
                                             <td>{{$booking->ref}}</td>

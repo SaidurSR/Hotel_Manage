@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2022 at 01:39 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.0.14
+-- Generation Time: Jan 22, 2022 at 06:15 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,8 +60,9 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `banner_src`, `alt_text`, `publish_status`, `created_at`, `updated_at`) VALUES
-(6, 'public/imgs/144n7hD1KD1pHMXD1i4uWuQY33PsiDkB9IDxb8HI.jpg', 'a', 'on', '2022-01-18 05:25:01', '2022-01-18 05:25:01'),
-(7, 'public/imgs/setlOLrEBcDeQp9ygrxzPoJkfIz7lVSsz2XChCs2.jpg', 'a', 'on', '2022-01-18 05:25:33', '2022-01-18 05:25:33');
+(8, 'public/imgs/QPN4m3sQXi3EJHq2JV5SQrsKdzuUZuX0N5rd2uru.jpg', 'Banner', 'on', '2022-01-22 10:05:53', '2022-01-22 10:05:53'),
+(9, 'public/imgs/MlV1BSK4XGxqzbvqFsSxag0I7NogeqGywe51oh1O.jpg', 'Banner', 'on', '2022-01-22 10:06:50', '2022-01-22 10:06:50'),
+(10, 'public/imgs/PcmotBkdt78futukyR85g6QBipuXEs22vQgDbpWj.jpg', 'Banner', 'on', '2022-01-22 10:07:31', '2022-01-22 10:07:31');
 
 -- --------------------------------------------------------
 
@@ -87,8 +88,11 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `customer_id`, `room_id`, `checkin_date`, `checkout_date`, `total_adults`, `total_children`, `ref`, `created_at`, `updated_at`) VALUES
-(1, 4, 1, '2021-10-29', '2021-10-30', '2', '0', 'admin', '2021-10-28 13:02:01', '2021-10-28 13:02:01'),
-(2, 5, 1, '2022-01-18', '2022-01-20', '2', '1', 'admin', '2022-01-18 05:31:51', '2022-01-18 05:31:51');
+(5, 6, 5, '2022-01-23', '2022-01-26', '2', '0', 'admin', '2022-01-22 10:47:27', '2022-01-22 10:47:27'),
+(6, 7, 7, '2022-01-23', '2022-01-25', '2', '0', 'admin', '2022-01-22 10:49:49', '2022-01-22 10:49:49'),
+(7, 8, 6, '2022-01-24', '2022-01-27', '2', '0', 'admin', '2022-01-22 10:51:10', '2022-01-22 10:51:10'),
+(8, 9, 9, '2022-01-26', '2022-01-28', '2', '0', 'admin', '2022-01-22 10:53:54', '2022-01-22 10:53:54'),
+(9, 10, 11, '2022-01-24', '2022-01-29', '5', '1', 'admin', '2022-01-22 10:55:23', '2022-01-22 10:55:23');
 
 -- --------------------------------------------------------
 
@@ -113,9 +117,11 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `full_name`, `email`, `password`, `mobile`, `address`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'John Doe', 'john@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '1234567890', NULL, NULL, '2021-09-01 13:48:32', '2021-09-01 13:48:32'),
-(4, 'Alex Lee', 'alex@gmail.com', 'd54b76b2bad9d9946011ebc62a1d272f4122c7b5', '789456123', 'test', NULL, '2021-09-28 13:43:42', '2021-09-28 13:43:42'),
-(5, 'saidur rahman', 'forumct24@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '01515226123', 'dhaka', NULL, '2022-01-18 04:25:37', '2022-01-18 04:25:37');
+(6, 'Sujon Ahmed', 'sujon@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '01545778899', 'Tangail,Dhaka', 'public/imgs/7VGMKVlFaGmhJEE4pp7c0o8JCFMv0RHtpYFTwuX6.jpg', '2022-01-22 10:44:51', '2022-01-22 10:56:33'),
+(7, 'Mostofa Kamal', 'mostofa@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '01859698745', 'Bogura', 'public/imgs/g9v3dRgSJwrKt7B5w8Mz9eOpTWJAx3MUNyNIvw5b.jpg', '2022-01-22 10:48:58', '2022-01-22 10:56:49'),
+(8, 'Lamon Mia', 'lamon@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '0145878965', 'Khulna', 'public/imgs/G5CXL4DZ4qo7G8sQSvamtwnoJ5dp7Bx1GKzF411S.jpg', '2022-01-22 10:50:27', '2022-01-22 10:57:03'),
+(9, 'Apon Ali', 'apon@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '01785968574', 'Sylhet', 'public/imgs/bISYHEY0P32OD9cyXRzgsM1jRKxuXFHCGnlMfuoz.jpg', '2022-01-22 10:52:53', '2022-01-22 10:57:13'),
+(10, 'Selim Udiin', 'selim@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', '0158969845', 'Chitagong', 'public/imgs/q7aXjIDfbWSGz5iRqAJtPgxVayJZlMVBMYzIrE3p.jpg', '2022-01-22 10:54:26', '2022-01-22 10:57:21');
 
 -- --------------------------------------------------------
 
@@ -136,8 +142,11 @@ CREATE TABLE `departments` (
 --
 
 INSERT INTO `departments` (`id`, `title`, `detail`, `created_at`, `updated_at`) VALUES
-(1, 'HouseKeeping', 'HouseKeeping Detail', '2021-08-15 04:29:31', '2021-08-15 04:29:31'),
-(2, 'Shift Managers', 'Shift Managers Detail', '2021-08-15 04:30:02', '2021-08-15 04:30:02');
+(3, 'Cleaner', 'Hotel Cleaner', '2022-01-22 10:32:02', '2022-01-22 10:32:02'),
+(4, 'House Keeper', 'House Keaper', '2022-01-22 10:32:21', '2022-01-22 10:32:21'),
+(5, 'Manager', 'Hotel Manger', '2022-01-22 10:32:32', '2022-01-22 10:32:32'),
+(6, 'Assistant Manager', 'Assistant Manager', '2022-01-22 10:32:50', '2022-01-22 10:32:50'),
+(7, 'Cook', 'Hotel Cook', '2022-01-22 10:33:07', '2022-01-22 10:33:07');
 
 -- --------------------------------------------------------
 
@@ -222,9 +231,14 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `title`, `created_at`, `updated_at`, `room_type_id`) VALUES
-(1, 'Room 1', '2021-09-02 12:02:22', '2021-09-02 12:02:22', 1),
-(2, 'Room 2', '2021-09-02 12:02:40', '2021-09-02 12:02:40', 2),
-(3, 'Room 3', '2021-09-13 12:21:02', '2021-09-13 12:21:02', 1);
+(5, 'B 101', '2022-01-22 10:30:13', '2022-01-22 10:30:13', 23),
+(6, 'B 102', '2022-01-22 10:30:21', '2022-01-22 10:30:21', 23),
+(7, 'B 103', '2022-01-22 10:30:39', '2022-01-22 10:30:39', 24),
+(8, 'B 104', '2022-01-22 10:30:44', '2022-01-22 10:30:44', 24),
+(9, 'C 101', '2022-01-22 10:30:51', '2022-01-22 10:30:51', 25),
+(10, 'C 102', '2022-01-22 10:30:59', '2022-01-22 10:30:59', 25),
+(11, 'D 101', '2022-01-22 10:31:16', '2022-01-22 10:31:16', 26),
+(12, 'D 102', '2022-01-22 10:31:23', '2022-01-22 10:31:23', 26);
 
 -- --------------------------------------------------------
 
@@ -248,7 +262,18 @@ CREATE TABLE `roomtypeimages` (
 INSERT INTO `roomtypeimages` (`id`, `room_type_id`, `img_src`, `img_alt`, `created_at`, `updated_at`) VALUES
 (23, 21, 'public/imgs/vD5L0IlIU4sztSucrQIEq0FmEY8yeJQsJEjurKPn.jpg', 'Sweet Room', '2021-08-09 12:08:37', '2021-08-09 12:08:37'),
 (31, 1, 'public/imgs/ehMMWJulWTWDtbhXR56FMc52lRPCXrlYLVK0xHIK.jpg', 'Deluxe Rooms', '2022-01-18 06:12:51', '2022-01-18 06:12:51'),
-(32, 1, 'public/imgs/TKqtkxwJZoskPs0GFIX5g3UwSvlniNZLJ2OC64Oo.jpg', 'Deluxe Rooms', '2022-01-18 06:12:51', '2022-01-18 06:12:51');
+(32, 1, 'public/imgs/TKqtkxwJZoskPs0GFIX5g3UwSvlniNZLJ2OC64Oo.jpg', 'Deluxe Rooms', '2022-01-18 06:12:51', '2022-01-18 06:12:51'),
+(33, 23, 'public/imgs/chMCb1gzANhCGIIj8IvSx8rMXrCPna5s9RVM3hkq.jpg', 'Eco', '2022-01-22 10:11:21', '2022-01-22 10:11:21'),
+(34, 24, 'public/imgs/Pf7x0dEMDTsR2qZ4ld84q3vH25HdIXrPbmCxWnoE.jpg', 'VIP', '2022-01-22 10:12:31', '2022-01-22 10:12:31'),
+(35, 25, 'public/imgs/EID4nRHG42zSqVyVDOFEvvTDM1sZa2XUyradpK6d.jpg', 'Business Class', '2022-01-22 10:16:16', '2022-01-22 10:16:16'),
+(37, 23, 'public/imgs/PGmJEtVVlFkHoTahCUqaJF2QcFI67VFagc5wL2yP.jpg', 'Economy', '2022-01-22 10:18:32', '2022-01-22 10:18:32'),
+(38, 23, 'public/imgs/KXQ3WKednJvWerbQl4dYalHI0iapbiwmMtXnOIRt.jpg', 'Economy', '2022-01-22 10:20:05', '2022-01-22 10:20:05'),
+(39, 24, 'public/imgs/O4d5H0q7D58HhXjIorJuPxs6XfY0xtL7JOaOjtMH.jpg', 'VIP', '2022-01-22 10:21:09', '2022-01-22 10:21:09'),
+(40, 24, 'public/imgs/67qdkEnS96jEhWyqeFL2J1yOxf2FPLwbRqer5fna.jpg', 'VIP', '2022-01-22 10:21:39', '2022-01-22 10:21:39'),
+(41, 25, 'public/imgs/TGsPOc9UhIde5ZikenGzTf3I3pRLngTceStUIL6L.jpg', 'Business Class', '2022-01-22 10:23:41', '2022-01-22 10:23:41'),
+(43, 25, 'public/imgs/n7EWD8ncROgtW6enQT8iI01SyZEJIO5RhXGKJWUF.jpg', 'Business Class', '2022-01-22 10:24:18', '2022-01-22 10:24:18'),
+(44, 26, 'public/imgs/D48eQKm4Pe2c2383SLaJ7xWSicQk5NQKebo4e1of.jpg', 'Family Type', '2022-01-22 10:28:30', '2022-01-22 10:28:30'),
+(45, 26, 'public/imgs/jTu5cA4Gb4nknyEnRvDRMDye1JEyIc22oISruUV9.jpg', 'Family Type', '2022-01-22 10:28:42', '2022-01-22 10:28:42');
 
 -- --------------------------------------------------------
 
@@ -270,9 +295,10 @@ CREATE TABLE `room_types` (
 --
 
 INSERT INTO `room_types` (`id`, `title`, `detail`, `created_at`, `updated_at`, `price`) VALUES
-(1, 'Deluxe Rooms', 'Deluxe Rooms', '2021-07-28 11:37:11', '2021-07-29 11:23:57', '5000'),
-(2, 'Premium Rooms', 'Premium Rooms', '2021-07-28 11:37:20', '2021-07-29 11:24:07', '10000'),
-(22, 'Sweet Room', 'Sweet Room', '2021-08-09 12:26:18', '2021-08-09 12:26:18', '200');
+(23, 'Economy', 'Economy Class. 2 bed 2/4 person', '2022-01-22 10:11:21', '2022-01-22 10:14:08', '2000'),
+(24, 'VIP', 'Vip Room \r\nWith A/C', '2022-01-22 10:12:31', '2022-01-22 10:21:09', '4000'),
+(25, 'Business Class', 'Business Class Room With All Service free!', '2022-01-22 10:16:16', '2022-01-22 10:16:16', '8000'),
+(26, 'Family Type', 'Family Size Double Bed', '2022-01-22 10:28:30', '2022-01-22 10:28:30', '10000');
 
 -- --------------------------------------------------------
 
@@ -321,7 +347,12 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `full_name`, `department_id`, `photo`, `bio`, `salary_type`, `salary_amt`, `created_at`, `updated_at`) VALUES
-(1, 'Alex Lee', 1, 'public/imgs/zIgkPJneI4uz5q4B0iKqrUByUciq4123dBTRrDev.jpg', 'This is some bio detail', 'monthly', '5000', '2021-08-15 04:34:28', '2021-08-29 02:02:24');
+(2, 'Mijanur Rahman', 3, 'public/imgs/M7hK89hCEcXy4WLTIzzvjh4dPtZUHxtBrVMjUEK0.jpg', 'Address: Dhaka', 'monthly', '8000', '2022-01-22 10:36:15', '2022-01-22 10:36:15'),
+(3, 'Hafiz Uddin', 4, 'public/imgs/RYXTyb6IaRNhjoqe6jpE4bZczyC9cgA1BsrO4Z7q.jpg', 'Adress: Dhaka', 'monthly', '10000', '2022-01-22 10:37:30', '2022-01-22 10:37:30'),
+(4, 'Joshim Hawladar', 6, 'public/imgs/K4Ml7FStUGnRQnHQJP4Ctib6qEw3zgZhLiniOz8P.jpg', 'Adress: Barishal', 'monthly', '10000', '2022-01-22 10:38:34', '2022-01-22 10:39:02'),
+(5, 'Gofur Kazi', 7, 'public/imgs/CkUtTzH2dw0F0Hm2n3G0BIH7MM11YoPEevbAguEH.jpg', 'Dhaka', 'monthly', '10000', '2022-01-22 10:41:55', '2022-01-22 10:41:55'),
+(6, 'Md Saidur Rahman', 5, 'public/imgs/OoZVethQzKbtUvohe3c2w4uczfLynnQn5fXJpXo2.jpg', 'Tangail', 'monthly', '500000', '2022-01-22 10:42:34', '2022-01-22 10:42:34'),
+(7, 'Masud Rana', 6, 'public/imgs/DMLTrOcLh7GIpqveHtPEthLL52bwoNjFXie1ptI5.jpg', 'Dhaka', 'monthly', '20000', '2022-01-22 10:43:19', '2022-01-22 10:43:19');
 
 -- --------------------------------------------------------
 
@@ -357,7 +388,11 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `customer_id`, `testi_cont`, `created_at`, `updated_at`) VALUES
-(1, 4, 'adfasdfsdfsdfsdf', '2021-10-31 03:09:57', '2021-10-31 03:09:57');
+(4, 6, 'nice services', '2022-01-22 10:48:17', '2022-01-22 10:48:17'),
+(5, 7, 'great service', '2022-01-22 10:50:00', '2022-01-22 10:50:00'),
+(6, 8, 'Best hotel', '2022-01-22 10:50:48', '2022-01-22 10:50:48'),
+(7, 9, 'wow...nice service', '2022-01-22 10:53:17', '2022-01-22 10:53:17'),
+(8, 10, 'great services', '2022-01-22 10:54:52', '2022-01-22 10:54:52');
 
 -- --------------------------------------------------------
 
@@ -492,25 +527,25 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -528,19 +563,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `roomtypeimages`
 --
 ALTER TABLE `roomtypeimages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `room_types`
 --
 ALTER TABLE `room_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -552,7 +587,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `staff_payments`
@@ -564,7 +599,7 @@ ALTER TABLE `staff_payments`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
